@@ -336,6 +336,10 @@ amqplib@^0.5.2:
     readable-stream "1.x >=1.1.9"
     safe-buffer "^5.0.1"
 
+angular-in-memory-web-api@^0.5.4:
+  version "0.5.4"
+  resolved "http://registry.npm.taobao.org/angular-in-memory-web-api/download/angular-in-memory-web-api-0.5.4.tgz#85af913e0403ead9755bdb2e0835a41a51b658b0"
+
 ansi-html@0.0.7:
   version "0.0.7"
   resolved "http://registry.npm.taobao.org/ansi-html/download/ansi-html-0.0.7.tgz#813584021962a9e9e6fd039f940d12f56ca7859e"
