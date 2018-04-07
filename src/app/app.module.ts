@@ -14,6 +14,7 @@ import {HttpClientInMemoryWebApiModule} from 'angular-in-memory-web-api';
 import {InMemoryDataService} from './in-memory-data.service';
 import { ViewChildComponent } from './view-child/view-child.component';
 import { PaneDirective } from './pane.directive';
+import { HeroSearchComponent } from './hero-search/hero-search.component';
 
 @NgModule({
   imports: [
@@ -35,7 +36,8 @@ import { PaneDirective } from './pane.directive';
     MessagesComponent,
     DashboardComponent,
     ViewChildComponent,
-    PaneDirective
+    PaneDirective,
+    HeroSearchComponent
   ],
   providers: [
     HeroService,
