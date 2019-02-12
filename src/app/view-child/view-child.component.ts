@@ -1,4 +1,4 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
 import {PaneDirective} from '../pane.directive';
 
 @Component({
@@ -6,12 +6,22 @@ import {PaneDirective} from '../pane.directive';
   templateUrl: './view-child.component.html',
   styleUrls: ['./view-child.component.css']
 })
-export class ViewChildComponent implements OnInit {
+export class ViewChildComponent implements OnInit, AfterViewInit {
+  selectedPane: string = '';
+  shouldShow = true;
+  name: string = 'yvan';
+
+  @ViewChild('greet')
+  greetElem: ElementRef;
 
   constructor() {
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
+    console.dir(this.greetElem);
   }
 
   @ViewChild(PaneDirective)
@@ -20,9 +30,6 @@ export class ViewChildComponent implements OnInit {
       this.selectedPane = v.id;
     }, 0);
   }
-
-  selectedPane: string = '';
-  shouldShow = true;
 
   toggle() {
     this.shouldShow = !this.shouldShow;
