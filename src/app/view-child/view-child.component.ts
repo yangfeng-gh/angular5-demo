@@ -1,5 +1,5 @@
 import {Component, OnInit, ViewChild, ElementRef, AfterViewInit} from '@angular/core';
-import {PaneDirective} from '../pane.directive';
+import {PaneDirective} from '../../directive/pane.directive';
 
 @Component({
   selector: 'view-child',

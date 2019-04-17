@@ -7,5 +7,8 @@
   </nav>
   <router-outlet></router-outlet>
   <app-messages></app-messages>
-  <view-child></view-child>
+  <view-child highlight></view-child>
+  <p highlight>Angular2是Google推出的第二代Web开发框架</p>
+  <child [message]="msgToChild" (outer)="receive($event)"></child>
+  <p>{{msgFromChild}}</p>
 </div>

@@ -1,20 +1,23 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
 import { FormsModule } from "@angular/forms";
+import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
+import { HttpClientModule } from "@angular/common/http";
 import { AppComponent } from "./app.component";
 import { HeroesComponent } from "./heroes/heroes.component";
 import { HeroDetailComponent } from "./hero-detail/hero-detail.component";
-import { HeroService } from "./hero.service";
 import { MessagesComponent } from "./messages/messages.component";
-import { MessageService } from "./message.service";
 import { AppRoutingModule } from "./app-routing.module";
 import { DashboardComponent } from "./dashboard/dashboard.component";
-import { HttpClientModule } from "@angular/common/http";
-import { HttpClientInMemoryWebApiModule } from "angular-in-memory-web-api";
-import { InMemoryDataService } from "./in-memory-data.service";
 import { ViewChildComponent } from "./view-child/view-child.component";
-import { PaneDirective } from "./pane.directive";
 import { HeroSearchComponent } from "./hero-search/hero-search.component";
+import { HighlightDirective } from '../directive/highlight.directive';
+import { PaneDirective } from "../directive/pane.directive";
+import { MessageService } from "../providers/message.service";
+import { HeroService } from "../providers/hero.service";
+import { InMemoryDataService } from "../providers/in-memory-data.service";
+import { ChildComponent } from './component-relation/child.component'
+
 
 @NgModule({
   imports: [
@@ -36,8 +39,10 @@ import { HeroSearchComponent } from "./hero-search/hero-search.component";
     MessagesComponent,
     DashboardComponent,
     ViewChildComponent,
+    HeroSearchComponent,
+    ChildComponent,
     PaneDirective,
-    HeroSearchComponent
+    HighlightDirective
   ],
   providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
