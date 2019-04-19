@@ -16,7 +16,7 @@ import { PaneDirective } from "../directive/pane.directive";
 import { MessageService } from "../providers/message.service";
 import { HeroService } from "../providers/hero.service";
 import { InMemoryDataService } from "../providers/in-memory-data.service";
-import { ChildComponent } from './component-relation/child.component'
+import { ChildComponent } from './component-relation/child.component';
 
 
 @NgModule({
