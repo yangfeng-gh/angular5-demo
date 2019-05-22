@@ -4,7 +4,7 @@ import { Directive, ElementRef, Renderer } from '@angular/core';
   selector: '[highlight]'
 })
 export class HighlightDirective {
-  constructor(el: ElementRef, render: Renderer) {
-    render.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
+  constructor(el: ElementRef, renderer: Renderer) {
+    renderer.setElementStyle(el.nativeElement, 'backgroundColor', 'yellow');
   }
 }

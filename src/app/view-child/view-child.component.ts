@@ -25,9 +25,9 @@ export class ViewChildComponent implements OnInit, AfterViewInit {
   }
 
   @ViewChild(PaneDirective)
-  set pane(v: PaneDirective) {
+  set pane(pane: PaneDirective) {
     setTimeout(() => {
-      this.selectedPane = v.id;
+      this.selectedPane = pane.id;
     }, 0);
   }
 

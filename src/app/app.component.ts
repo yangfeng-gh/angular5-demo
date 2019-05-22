@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, View } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,9 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  private msgToChild: string;
-  private msgFromChild: string;
+  msgToChild: string;
+  msgFromChild: string;
   title = 'app';
+
   constructor() {}
 
   ngOnInit(): void {
